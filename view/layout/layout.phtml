@@ -70,9 +70,11 @@ $userBar = $this->userBar();
                 <?php endif; ?>
                 </a>
             </h1>
-            <div id="search">
-                <?php echo $this->partial('common/search-form'); ?>
-            </div>
+            <?php if ($this->themeSetting('display_fulltext_search')): ?>
+                <div id="search">
+                    <?php echo $this->partial('common/search-form'); ?>
+                </div>
+            <?php endif; ?>
 
             <nav>
             <?php
